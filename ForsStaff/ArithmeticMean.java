@@ -4,46 +4,35 @@ import java.util.Scanner;
 
 public class ArithmeticMean {
     public static void main(String[] args) {
-        Scanner kl = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Введите меньшее число: ");
-        int min = kl.nextInt();
+        int min = scanner.nextInt();
 
-        Scanner lk = new Scanner(System.in);
         System.out.print("Введите большее число: ");
-        int max = kl.nextInt();
+        int max = scanner.nextInt();
 
-        int i = min;
-        int j = 0;
+        int figure = min;
+        int amount = 0;
+        int amountEven = 0;
         int sum = 0;
+        int sumEven = 0;
         double srAr = 0;
 
-
         do {
-            sum = sum + i;
-            ++i;
-            ++j;
-        } while (!(i > max));
-
-        srAr = srAr + sum * 1.0 / j;
-
-        // среднее арифметическое только четных чисел:
-
-        int k = min;
-        int m = 0;
-        int sSum = 0;
-
-        do {
-            if (k % 2 != 0) {
-                ++k;
+            sum = sum + figure;
+            ++figure;
+            ++amount;
+            if (figure % 2 == 0) {
+                ++amountEven;
+                sumEven = sumEven + figure;
             }
-            sSum = sSum + k;
-            ++m;
-            k = k + 2;
-        } while (!(k > max));
+        } while (!(figure > max));
 
-        int srArChCh = sSum / m;
+        srAr = srAr + sum * 1.0 / amount;
+
+        int srArEven = sumEven / amountEven;
 
         System.out.println("Среднее арифметическое чисел в интервале от " + min + " до " + max + " составляет " + srAr);
-        System.out.println("Среднее арифметическое четных чисел в интервале от " + min + " до " + max + " составляет " + srArChCh);
+        System.out.println("Среднее арифметическое четных чисел в интервале от " + min + " до " + max + " составляет " + srArEven);
         }
     }
