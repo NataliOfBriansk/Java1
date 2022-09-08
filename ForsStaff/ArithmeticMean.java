@@ -33,5 +33,5 @@ public class ArithmeticMean {
 
         System.out.println("Среднее арифметическое чисел в интервале от " + min + " до " + max + " составляет " + average);
         System.out.println("Среднее арифметическое четных чисел в интервале от " + min + " до " + max + " составляет " + averageEven);
-        }
     }
+}
