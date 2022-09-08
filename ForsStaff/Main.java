@@ -21,7 +21,7 @@ public class Main {
         person.setName("noName");
         person.setFamilyName("Piu-piu");
 
-        System.out.println("В классе Person был создан объект " + person + " с годом рождения " + Person.getAgePerson(age));
+        System.out.println("В классе Person был создан объект " + person + " с годом рождения " + Person.getYearOfBirthPerson(age));
     }
 
 }

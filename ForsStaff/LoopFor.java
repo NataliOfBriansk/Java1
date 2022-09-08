@@ -1,11 +1,9 @@
 package ForsStaff;
 
-public class loopFor {
+public class LoopFor {
     public static void main(String[] args) {
-        boolean f;
         for (int a = 1, b = 100, i = b; i != 0; --i) {
-            f = getMultiple(i);
-            if (f) {
+            if (getMultiple(i)) {
                 System.out.print(i + " ");
             }
         }
@@ -13,9 +11,6 @@ public class loopFor {
     }
 
     public static boolean getMultiple(int y) {
-        int multiple4 = y % 4;
-        boolean multiple;
-        multiple = multiple4 == 0;
-        return multiple;
+        return y % 4 == 0;
     }
 }

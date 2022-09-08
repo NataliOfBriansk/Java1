@@ -1,5 +1,8 @@
 package ForsStaff;
 
+import java.time.YearMonth;
+
+
 public class Person {
     private String name;
     private String middleName;
@@ -52,8 +55,8 @@ public class Person {
         return "[ " + familyName + " " + name + " " + middleName + " " + " ]";
     }
 
-    public static int getAgePerson(int age) {
-        return 2022 - age;
+    public static int getYearOfBirthPerson(int age) {
+        return YearMonth.now().getYear() - age;
     }
 
 }

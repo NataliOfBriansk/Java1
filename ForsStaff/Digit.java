@@ -2,7 +2,7 @@ package ForsStaff;
 
 import java.util.Scanner;
 
-public class digit {
+public class Digit {
     public static void main(String[] args) {
         Scanner number = new Scanner(System.in);
         System.out.print("Введите исследуемое целое число: ");
