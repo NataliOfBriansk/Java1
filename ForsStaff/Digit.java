@@ -11,9 +11,10 @@ public class Digit {
         int sum = 0;
         int max = 0;
         int sumEven = 0;
+        int i = example;
 
-        while (example != 0) {
-            int lastCharacter = example % 10;
+        while (i != 0) {
+            int lastCharacter = i % 10;
             sum = sum + lastCharacter;
             if (lastCharacter > max) {
                 max = lastCharacter;
@@ -21,7 +22,7 @@ public class Digit {
             if (lastCharacter % 2 != 0) {
                 sumEven = sumEven + lastCharacter;
             }
-            example = example / 10;
+            i = i / 10;
         }
 
         System.out.println("Сумма цифр вашего числа: " + sum);
