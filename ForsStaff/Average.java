@@ -13,26 +13,21 @@ public class Average {
 
         int i = 0;
         int j = 0;
+        int k = min;
         int sum = 0;
         int sumEven = 0;
-        double average = 0;
-        double averageEven = 0;
 
         do {
-            sum = sum + min;
-            ++i;                              //количество чисел всего от min до max
-            if (min % 2 == 0) {
-                ++j;                          //количество только четных чисел
-                sumEven = sumEven + min;
+            sum = sum + k;
+            ++i;
+            if (k % 2 == 0) {
+                ++j;
+                sumEven = sumEven + k;
             }
-            ++min;                            //переходит к следующему числу
-        } while (!(min > max));
+            ++k;
+        } while (!(k > max));
 
-        average = average + sum * 1.0 / i;
-
-        averageEven = sumEven * 1.0 / j;
-
-        System.out.println("Среднее арифметическое чисел в интервале от " + min + " до " + max + " составляет " + average);
-        System.out.println("Среднее арифметическое четных чисел в интервале от " + min + " до " + max + " составляет " + averageEven);
+        System.out.println("Среднее арифметическое чисел в интервале от " + min + " до " + max + " составляет " + (double) sum / i);
+        System.out.println("Среднее арифметическое четных чисел в интервале от " + min + " до " + max + " составляет " + (double) sumEven / j);
     }
 }
